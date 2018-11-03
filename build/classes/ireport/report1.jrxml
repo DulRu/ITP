@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="addbcb5a-38bc-4e76-8717-a52c340fda62">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     deliveryassignment.`DeliveryId` AS deliveryassignment_DeliveryId,
+     deliveryassignment.`OrderId` AS deliveryassignment_OrderId,
+     deliveryassignment.`VId` AS deliveryassignment_VId,
+     deliveryassignment.`Maxweight` AS deliveryassignment_Maxweight,
+     deliveryassignment.`Destination` AS deliveryassignment_Destination,
+     deliveryassignment.`HandlingDate` AS deliveryassignment_HandlingDate,
+     deliveryassignment.`ShipDate` AS deliveryassignment_ShipDate,
+     deliveryassignment.`DriverId` AS deliveryassignment_DriverId,
+     deliveryassignment.`Style` AS deliveryassignment_Style,
+     deliveryassignment.`TotalPieces` AS deliveryassignment_TotalPieces,
+     deliveryassignment.`DeliveryStatus` AS deliveryassignment_DeliveryStatus
+FROM
+     `deliveryassignment` deliveryassignment]]>
+	</queryString>
+	<field name="deliveryassignment_DeliveryId" class="java.lang.String"/>
+	<field name="deliveryassignment_OrderId" class="java.lang.String"/>
+	<field name="deliveryassignment_VId" class="java.lang.String"/>
+	<field name="deliveryassignment_Maxweight" class="java.lang.String"/>
+	<field name="deliveryassignment_Destination" class="java.lang.String"/>
+	<field name="deliveryassignment_HandlingDate" class="java.lang.String"/>
+	<field name="deliveryassignment_ShipDate" class="java.lang.String"/>
+	<field name="deliveryassignment_DriverId" class="java.lang.String"/>
+	<field name="deliveryassignment_Style" class="java.lang.String"/>
+	<field name="deliveryassignment_TotalPieces" class="java.lang.Integer"/>
+	<field name="deliveryassignment_DeliveryStatus" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="564f1538-33ed-466b-9336-f439e0887151"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="36124452-9c4c-4365-a812-29e819840f36"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="f35b904c-ded2-4075-8518-6e0e8e18ff7b"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="4cd4c5f8-d338-4ec0-a53b-c7eff23ecdef"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="50" height="15" uuid="273ebfda-3925-4746-a800-4a3645023713"/>
+				<text><![CDATA[deliveryassignment_DeliveryId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="50" y="19" width="50" height="15" uuid="bb391091-06d4-4e77-8a2b-cd0885ae6d42"/>
+				<text><![CDATA[deliveryassignment_OrderId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="100" y="19" width="50" height="15" uuid="142f7590-021a-4f5e-939a-eb23ed43ce90"/>
+				<text><![CDATA[deliveryassignment_VId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="150" y="19" width="50" height="15" uuid="5d01e434-d343-45ed-839a-b3b9e4767382"/>
+				<text><![CDATA[deliveryassignment_Maxweight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="19" width="50" height="15" uuid="dd770d40-eb34-4a45-bdd0-7bab7bc7cc01"/>
+				<text><![CDATA[deliveryassignment_Destination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="250" y="19" width="50" height="15" uuid="4b208526-6128-436a-bc97-874475562cbb"/>
+				<text><![CDATA[deliveryassignment_HandlingDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="19" width="50" height="15" uuid="eea097cc-b3a6-4852-9fcd-2445037b8ea1"/>
+				<text><![CDATA[deliveryassignment_ShipDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="350" y="19" width="50" height="15" uuid="16a9420e-b8eb-4a66-bb9a-d8406edc7c9c"/>
+				<text><![CDATA[deliveryassignment_DriverId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="19" width="50" height="15" uuid="d8de23de-83b9-4aa5-9d8e-9e536379ee02"/>
+				<text><![CDATA[deliveryassignment_Style]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="450" y="19" width="50" height="15" uuid="97192bfb-041f-460e-822e-89f42d5a9793"/>
+				<text><![CDATA[deliveryassignment_TotalPieces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="19" width="50" height="15" uuid="0748ab73-1f26-4a23-9f26-8777f86d4b1d"/>
+				<text><![CDATA[deliveryassignment_DeliveryStatus]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="9b50a7c9-11bf-47c1-bcf2-93d1e916280e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="50" height="15" uuid="cf5dfa28-72ae-4da2-9056-8760eabce610"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_DeliveryId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="50" y="0" width="50" height="15" uuid="bb6e4299-dfbe-46b1-97e5-8cada2a1e46d"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_OrderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="100" y="0" width="50" height="15" uuid="45a3d27f-e000-4894-bcb6-651088e640d9"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_VId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="150" y="0" width="50" height="15" uuid="b530fabc-aa00-4330-9de3-59a82ff36714"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_Maxweight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="200" y="0" width="50" height="15" uuid="78255843-a387-4197-83a0-d72f3eaeea14"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_Destination}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="250" y="0" width="50" height="15" uuid="a51c00a5-e3fb-4541-9272-5fdcdc08f498"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_HandlingDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="300" y="0" width="50" height="15" uuid="30ee3a98-3735-4732-b176-ae6c0c7a8337"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_ShipDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="350" y="0" width="50" height="15" uuid="147936a6-9e5c-4172-9e9f-1138b2ca7848"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_DriverId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="400" y="0" width="50" height="15" uuid="a7cb3300-6f59-4231-91b5-3e659f3b0f56"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_Style}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="450" y="0" width="50" height="15" uuid="75059b62-15e4-4bf0-adec-d7249fa4bbb8"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_TotalPieces}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="500" y="0" width="50" height="15" uuid="680354e1-4f84-4876-a3ce-85de1b63055c"/>
+				<textFieldExpression><![CDATA[$F{deliveryassignment_DeliveryStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5060986e-e6a6-4a20-af6c-5ac727c285c2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="25b37a11-d7f9-4331-a07f-71c2beadecd0"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="12d73383-1c62-4fa6-9c21-556250331ab7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="131fc632-9852-44c4-a418-5998deea06f8"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

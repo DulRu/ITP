@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="188bf46d-0760-44c1-a6f2-a9399e076893">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bill.`MID` AS bill_MID,
+     bill.`Bno` AS bill_Bno,
+     bill.`Btype` AS bill_Btype,
+     bill.`date` AS bill_date,
+     bill.`ramount` AS bill_ramount,
+     bill.`oamount` AS bill_oamount
+FROM
+     `bill` bill]]>
+	</queryString>
+	<field name="bill_MID" class="java.lang.String"/>
+	<field name="bill_Bno" class="java.lang.String"/>
+	<field name="bill_Btype" class="java.lang.String"/>
+	<field name="bill_date" class="java.sql.Date"/>
+	<field name="bill_ramount" class="java.lang.Double"/>
+	<field name="bill_oamount" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="d9747a67-9307-4d95-8219-e17cc5ce42a3"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="70e699a5-645d-44aa-8956-16ace5ba16f8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="f4564362-9a81-4aff-b7fd-a4365b054932"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="d8fe3127-fcb5-4c14-bd37-ec44b2f89ff9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="fb717e55-621b-4891-83bd-7e54854b80a2"/>
+				<text><![CDATA[bill_MID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="9281212c-9a92-4fb4-9175-34c560e86e85"/>
+				<text><![CDATA[bill_Bno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="c44417d3-8842-4809-b702-f57ead9e02bb"/>
+				<text><![CDATA[bill_Btype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="4406ee7c-e953-4803-9b9c-b548b8df87b1"/>
+				<text><![CDATA[bill_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="480a29c9-9c4d-4252-b0f6-09602b006203"/>
+				<text><![CDATA[bill_ramount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="ea106654-9928-4a41-8ba0-39881cd1f4cc"/>
+				<text><![CDATA[bill_oamount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="82b39b06-4d32-45b7-9d6b-8acca72ae128"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="b70f194f-0068-4811-8416-3d06edbec7a5"/>
+				<textFieldExpression><![CDATA[$F{bill_MID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="7584ec38-2fed-4e2c-bba1-3d56190bc8dd"/>
+				<textFieldExpression><![CDATA[$F{bill_Bno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="ea96b4a9-3b60-4128-8dc7-a1a6ff4a002c"/>
+				<textFieldExpression><![CDATA[$F{bill_Btype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="470f90d0-972e-439a-817a-681c90862b2a"/>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="730c0596-d220-4dc2-8303-222f6a25e732"/>
+				<textFieldExpression><![CDATA[$F{bill_ramount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="546ae6e6-aa10-43ae-9ab1-4c104fd6ad8f"/>
+				<textFieldExpression><![CDATA[$F{bill_oamount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="76b9e21a-e965-4666-9ee9-fd75cb11f6a7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="97c56c29-5aee-4808-a6ad-bf4b9b390d59"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="33f9dc6c-1dfe-4687-b554-1fce63971b7b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="711223a4-7fbe-4922-89ca-4a387a3440d4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
